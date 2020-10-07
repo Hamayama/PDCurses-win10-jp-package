@@ -3,8 +3,11 @@
 
 ## 概要
 - PDCurses-win10-jp ( https://github.com/Hamayama/PDCurses-win10-jp ) の  
-  MSYS2/MinGW-w64 (64bit/32bit) 用のパッケージファイルを  
+  MSYS2/MinGW-w64 (64bit/32bit) 用のパッケージファイルを、  
   管理するリポジトリです。
+
+- ( PDCurses-win10-jp は、PDCurses の Windows Console 用ポート (wincon) を、  
+  Windows 10 上での日本語表示が改善するように、改造したものです)
 
 
 ## インストール方法
@@ -20,51 +23,74 @@
 2. パッケージファイルのダウンロード  
    以下のリリースページから、環境に応じたパッケージファイルをダウンロードして、  
    適当な作業用フォルダに置いてください。  
+   (作業用フォルダのパスには、空白を入れないようにしてください)  
+   
    https://github.com/Hamayama/PDCurses-win10-jp-package/releases  
-   ( i686 は 32bit 環境用で、x86_64 は 64bit 環境用になります)  
-   ( win8 は Windows 8.1 以前用で、win10 は Windows 10 用になります)  
-   ( 作業用フォルダのパスには、空白を入れないようにしてください)
+   
+   ( i686 は 32bit 環境用で、x86_64 は 64bit 環境用になります。  
+   また、win8 は Windows 8.1 以前用で、win10 は Windows 10 用になります)
 
 3. パッケージファイルのインストール  
    ダウンロードしたパッケージファイルを、開発環境にインストールします。  
-   ＜MSYS2/MinGW-w64 (64bit) 環境の場合＞  
+   
+   ＜Windows 10 で、MSYS2/MinGW-w64 (64bit) 環境の場合＞  
    プログラムメニューから MSYS2 の MinGW 64bit Shell を起動して、以下のコマンドを実行してください。  
-   ( c:\work に Windows 10 (64bit) 用のパッケージファイルを置いた場合)
+   ( c:\work にパッケージファイルを置いた場合)
    ```
    cd /c/work
    pacman -U mingw-w64-x86_64-pdcurses-win10-jp-3.9-2-any.pkg.tar.zst
    ```
-   ＜MSYS2/MinGW-w64 (32bit) 環境の場合＞  
+   ＜Windows 10 で、MSYS2/MinGW-w64 (32bit) 環境の場合＞  
    プログラムメニューから MSYS2 の MinGW 32bit Shell を起動して、以下のコマンドを実行してください。  
-   ( c:\work に Windows 10 (32bit) 用のパッケージファイルを置いた場合)
+   ( c:\work にパッケージファイルを置いた場合)
    ```
    cd /c/work
    pacman -U mingw-w64-i686-pdcurses-win10-jp-3.9-2-any.pkg.tar.zst
    ```
-   
-   (注意) もし、Lem エディタ ( https://github.com/cxxxr/lem ) のライブラリとして使用する場合には、  
+   ＜Windows 8.1 以前で、MSYS2/MinGW-w64 (64bit) 環境の場合＞  
+   プログラムメニューから MSYS2 の MinGW 64bit Shell を起動して、以下のコマンドを実行してください。  
+   ( c:\work にパッケージファイルを置いた場合)
+   ```
+   cd /c/work
+   pacman -U mingw-w64-x86_64-pdcurses-win8-jp-3.9-2-any.pkg.tar.zst
+   ```
+   ＜Windows 8.1 以前で、MSYS2/MinGW-w64 (32bit) 環境の場合＞  
+   プログラムメニューから MSYS2 の MinGW 32bit Shell を起動して、以下のコマンドを実行してください。  
+   ( c:\work にパッケージファイルを置いた場合)
+   ```
+   cd /c/work
+   pacman -U mingw-w64-i686-pdcurses-win8-jp-3.9-2-any.pkg.tar.zst
+   ```
+
+4. その他  
+   もし、Lem エディタ ( https://github.com/cxxxr/lem ) のライブラリとして使用する場合には、  
    以下のコマンドを追加で実行してください。  
    (この名前のヘッダーファイルしか認識しないため)  
-   ＜MSYS2/MinGW-w64 (64bit) 環境の場合＞
+   
+   ＜MSYS2/MinGW-w64 (64bit) 環境の場合＞  
+   プログラムメニューから MSYS2 の MinGW 64bit Shell を起動して、以下のコマンドを実行してください。
    ```
    cp -i /mingw64/include/pdcurses.h /mingw64/include/ncurses.h
-
    ```
-   ＜MSYS2/MinGW-w64 (32bit) 環境の場合＞
+   ＜MSYS2/MinGW-w64 (32bit) 環境の場合＞  
+   プログラムメニューから MSYS2 の MinGW 32bit Shell を起動して、以下のコマンドを実行してください。
    ```
    cp -i /mingw32/include/pdcurses.h /mingw32/include/ncurses.h
-
    ```
 
+- 以上です。
 
-## 保守用のメモ
-- プログラムメニューから MSYS2 の MinGW 64bit Shell を起動して、以下のコマンドを実行。
-  ```
-  cd /c/work/PDCurses-win10-jp-package
-  makepkg-mingw
-  makepkg-mingw -p PKGBUILD_win8
-  ```
-  その後、GitHub のページでリリースを作成して、パッケージファイルをアップロード。
+
+## 保守用メモ
+1. プログラムメニューから MSYS2 の MinGW 64bit Shell を起動して、  
+   以下のコマンドを実行すると、パッケージファイルが生成される。
+   ```
+   cd /c/work/PDCurses-win10-jp-package
+   makepkg-mingw
+   makepkg-mingw -p PKGBUILD_win8
+   ```
+   その後、GitHub の Release ページでリリースを作成して、  
+   パッケージファイルをアップロードする。
 
 
 ## 環境等
