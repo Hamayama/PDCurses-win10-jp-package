@@ -56,15 +56,17 @@
 
    ```
 
+- 以上です。
+
 
 ## 保守用のメモ
-- プログラムメニューから MSYS2 の MinGW 64bit Shell を起動して、以下のコマンドを実行。
-  ```
-  cd /c/work/PDCurses-win10-jp-package
-  makepkg-mingw
-  makepkg-mingw -p PKGBUILD_win8
-  ```
-  その後、GitHub のページでリリースを作成して、パッケージファイルをアップロード。
+1. プログラムメニューから MSYS2 の MinGW 64bit Shell を起動して、以下のコマンドを実行。
+   ```
+   cd /c/work/PDCurses-win10-jp-package
+   makepkg-mingw
+   makepkg-mingw -p PKGBUILD_win8
+   ```
+   その後、GitHub のページでリリースを作成して、パッケージファイルをアップロード。
 
 
 ## 環境等
