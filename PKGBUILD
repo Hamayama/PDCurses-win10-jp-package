@@ -22,6 +22,8 @@ conflicts=(${MINGW_PACKAGE_PREFIX}-pdcurses ${MINGW_PACKAGE_PREFIX}-pdcurses-win
 build() {
   cd "${srcdir}/PDCurses-win10-jp-master"
 
+  make clean
+
   make \
     CC=${MINGW_PREFIX}/bin/gcc \
     LINK=${MINGW_PREFIX}/bin/gcc \
