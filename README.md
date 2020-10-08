@@ -3,8 +3,8 @@
 
 ## 概要
 - PDCurses-win10-jp ( https://github.com/Hamayama/PDCurses-win10-jp ) の  
-  MSYS2/MinGW-w64 (64bit/32bit) 用のパッケージファイルを、  
-  管理するリポジトリです。
+  MSYS2/MinGW-w64 (64bit/32bit) 用のパッケージファイルを  
+  配布するリポジトリです。
 
 - ( PDCurses-win10-jp は、PDCurses の Windows Console 用ポート (wincon) を、  
   Windows 10 上での日本語表示が改善するように、改造したものです)
@@ -105,4 +105,4 @@
 - 2020-10-7  PDCurses-win10-jp v3.9-jp0002 のパッケージファイルを作成
 
 
-(2020-10-7)
+(2020-10-8)
