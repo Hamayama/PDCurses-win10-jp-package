@@ -62,7 +62,7 @@
    pacman -U mingw-w64-i686-pdcurses-win8-jp-3.9-3-any.pkg.tar.xz
    ```
 
-4. その他  
+4. 追加の作業 (必要な方のみ)  
    もし、Lem エディタ ( https://github.com/cxxxr/lem ) のライブラリとして使用する場合には、  
    以下のコマンドを追加で実行してください。  
    (この名前のヘッダーファイルしか認識しないため)  
@@ -83,8 +83,8 @@
 
 ## 保守用メモ
 1. まず、PKGBUILD ファイル内の pkgrel の値と、  
-   ドキュメントのパッケージのリビジョンと履歴を更新する。  
-   プログラムメニューから MSYS2 の MinGW 64bit Shell を起動して、  
+   このドキュメント (README.md) 内のパッケージのリビジョンと履歴を更新する。  
+   そして、プログラムメニューから MSYS2 の MinGW 64bit Shell を起動して、  
    以下のコマンドを実行すると、パッケージファイルが生成される。
    ```
    cd /c/work/PDCurses-win10-jp-package
