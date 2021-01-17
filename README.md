@@ -41,28 +41,28 @@
    ( c:\work にパッケージファイルを置いた場合)
    ```
      cd /c/work
-     pacman -U mingw-w64-x86_64-pdcurses-win10-jp-3.9-26-any.pkg.tar.xz
+     pacman -U mingw-w64-x86_64-pdcurses-win10-jp-3.9-27-any.pkg.tar.xz
    ```
    ＜Windows 10 で、MSYS2/MinGW-w64 (32bit) 環境の場合＞  
    プログラムメニューから MSYS2 の MinGW 32bit Shell を起動して、以下のコマンドを実行してください。  
    ( c:\work にパッケージファイルを置いた場合)
    ```
      cd /c/work
-     pacman -U mingw-w64-i686-pdcurses-win10-jp-3.9-26-any.pkg.tar.xz
+     pacman -U mingw-w64-i686-pdcurses-win10-jp-3.9-27-any.pkg.tar.xz
    ```
    ＜Windows 8.1 以前で、MSYS2/MinGW-w64 (64bit) 環境の場合＞  
    プログラムメニューから MSYS2 の MinGW 64bit Shell を起動して、以下のコマンドを実行してください。  
    ( c:\work にパッケージファイルを置いた場合)
    ```
      cd /c/work
-     pacman -U mingw-w64-x86_64-pdcurses-win8-jp-3.9-26-any.pkg.tar.xz
+     pacman -U mingw-w64-x86_64-pdcurses-win8-jp-3.9-27-any.pkg.tar.xz
    ```
    ＜Windows 8.1 以前で、MSYS2/MinGW-w64 (32bit) 環境の場合＞  
    プログラムメニューから MSYS2 の MinGW 32bit Shell を起動して、以下のコマンドを実行してください。  
    ( c:\work にパッケージファイルを置いた場合)
    ```
      cd /c/work
-     pacman -U mingw-w64-i686-pdcurses-win8-jp-3.9-26-any.pkg.tar.xz
+     pacman -U mingw-w64-i686-pdcurses-win8-jp-3.9-27-any.pkg.tar.xz
    ```
 
 4. 追加の作業 (必要な方のみ)  
@@ -130,6 +130,7 @@
 - 2020-12-20 PDCurses-win10-jp v3.9-jp0024 のパッケージファイルを作成
 - 2020-12-21 PDCurses-win10-jp v3.9-jp0025 のパッケージファイルを作成
 - 2020-12-22 PDCurses-win10-jp v3.9-jp0026 のパッケージファイルを作成
+- 2021-1-17  PDCurses-win10-jp v3.9-jp0027 のパッケージファイルを作成
 
 
-(2020-12-22)
+(2021-1-17)
